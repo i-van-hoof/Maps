@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <title>Mijn eerste kaart met D3</title> 
+        <link rel="stylesheet" href="style/main.css"/>       
+    </head>
+
+    <body>
+        <H1>voorbeeld</H1>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script> 
+        //Width and height
+        var w = 1000;
+        var h = 600;
+
+        //Define map projection
+        var projection = d3.geo.mercator()
+                    .center([ 30, 40 ])
+                    .translate([ w/2, h/2 ])
+                    .scale([ w/7 ]);
+
+        //Define path generator
+        var path = d3.geo.path()
+                    .projection(projection);
+
+        //Create SVG
+        var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+
+        //Load in GeoJSON data
+        d3.json("js/landen.json", function(json) {
+
+        //[0] returns the first coordinate (x) of the projected value
+                return projection(d.geometry.coordinates)[0];
+                })
+                .attr("cy", function(d) {
+        //[1] returns the second coordinate (y) of the projected value
+                return projection(d.geometry.coordinates)[1];
+                })
+            .attr("r", 5)
+            .style("fill", "blue")
+            .style("opacity", 0.75);
+    });
+
+        //Bind data and create one path per GeoJSON feature
+        svg.selectAll("path")
+                    .data(json.features)
+                    .enter()
+                    .append("path")
+                    .attr("d", path);
+        });
+
+        	d3.json("js/landen.json", function(data){
+
+
+ //Create a circle for each city
+    svg.selectAll("circle")
+            .data(data.features)
+            .enter()
+            .append("circle")
+            .attr("cx", function(d) {
+        </script>
+    </body>
+
+</html>

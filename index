@@ -1,13 +1,32 @@
-<!doctype html>
-<html lang="nl">
-    <head>
-        <meta charset="utf-8">
-        <title>Mijn eerste kaart met D3</title> 
-        <link rel="stylesheet" href="style/main.css"/>       
-    </head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CryptoCoins Markets</title>
+    <meta charset="utf-8" />
+</head>
+<body>
 
-    <body>
-        <H1>HELLO WORLD</H1>
-    </body>
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="bitcoin" data-base="USD" ></div>
+
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="ethereum" data-base="USD"  data-secondary="BTC"></div>
+ 
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="antshares" data-base="USD"  data-secondary="BTC"></div> 
+
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="quantum-resistant-ledger" data-base="USD"  data-secondary="BTC"></div>
+
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="gulden" data-base="USD"  data-secondary="BTC"></div>
+
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="eos" data-base="USD"  data-secondary="BTC"></div>
+
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="civic" data-base="USD"  data-secondary="BTC"></div>
+
+</body>
 
 </html>
